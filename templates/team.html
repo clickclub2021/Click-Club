@@ -1,0 +1,504 @@
+{% extends 'base.html' %}
+
+{% block title %}Team{% endblock title %}
+{% block teamactive %}active{% endblock teamactive %}
+{% block body %}
+<style>
+    .team {
+        margin: 0;
+        font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        font-size: .8125rem;
+        font-weight: 400;
+        line-height: 1.5385;
+        color: #333;
+        text-align: left;
+    }
+    
+    .mt-100 {
+        margin-top: 100px
+    }
+    .btn {
+        position: relative
+    }
+    
+    .border-warning-400 {
+        border-color: #ff7043
+    }
+    
+    .facebook {
+        color: #3b5998;
+    }
+    
+    .instagram {
+        background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-stroke: 1.2px #d6249f;
+        -webkit-text-fill-color: transparent;
+    }
+    
+    .linkedin {
+        color: #0077b5;
+    }
+
+    .team ul li a i {
+    padding-right: 15px;
+    -webkit-transition: 0.1s ease-in;
+    -o-transition: 0.1s ease-in;
+    transition: 0.1s ease-in;
+    }
+
+    .team ul li a i:hover {
+    -webkit-transform: translate3d(0px, -5px, 0px);
+    transform: translate3d(0px, -5px, 0px);
+    }
+  .member {
+    flex: 33%;
+    width: 33vw;
+    padding: 0 4px;
+  }
+  
+ /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 992px) {
+    .member {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 768px) {
+    .member {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+</style>
+
+<div class="container">
+    <div class="team">
+        <div class="container-fluid">
+            <div class="container-fluid d-flex justify-content-center">
+                <div class="row">
+                    <div class="member col-4">
+                        <div class="text-center"> 
+                            <img src="/media/team/Faculty Advisor.jpg" class="face rounded-circle img-thumbnail" width="200" height="200"  style="transform: translate(0,100px);">
+                            <div class="card py-3" style="z-index:-1; height:240px">
+                                <h5 class="font-weight-bold" style="margin-top:100px">Faculty Advisor</h5>
+                                <h6 class="subtitle mb-3" style="color: #8d97ad;">Faculty Advisor</h6>
+                            </div>
+                            <ul class="list-inline" style="z-index:0; transform: translate(0,-50px);">
+                                <li class="list-inline-item"><a href="#"><i href="" class="fa fa-facebook fa-2x facebook"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-instagram fa-2x instagram"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin fa-2x linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>                    
+                </div>   
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="team">
+        <div class="container-fluid">
+            <div class="container-fluid d-flex justify-content-center">
+                <div class="row">
+                    <div class="member col-4">
+                        <div class="text-center"> 
+                            <img src="/media/team/Shubhangi Agrawal.jpg" class="face rounded-circle img-thumbnail" width="200" height="200"  style="transform: translate(0,100px);">
+                            <div class="card py-3" style="z-index:-1; height:240px">
+                                <h5 class="font-weight-bold" style="margin-top:100px">Shubhangi Agrawal</h5>
+                                <h6 class="subtitle mb-3" style="color: #8d97ad;">Head Coordinator</h6>
+                            </div>
+                            <ul class="list-inline" style="z-index:0; transform: translate(0,-50px);">
+                                <li class="list-inline-item"><a href="#"><i href="" class="fa fa-facebook fa-2x facebook"></i></a></li>
+                                <li class="list-inline-item"><a href="http://www.instagram.com/prism_dimension"><i class="fa fa-instagram fa-2x instagram"></i></a></li>
+                                <li class="list-inline-item"><a href="http://www.shubhangiagrawal.com"><i class="fa fa-link fa-2x link"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin fa-2x linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="member col-4">
+                        <div class="text-center"> 
+                            <img src="/media/team/Vatsal Pandey.jpg" class="face rounded-circle img-thumbnail" width="200" height="200"  style="transform: translate(0,100px);">
+                            <div class="card py-3" style="z-index:-1; height:240px">
+                                <h5 class="font-weight-bold" style="margin-top:100px">Vatsal Pandey</h5>
+                                <h6 class="subtitle mb-3" style="color: #8d97ad;">Head Coordinator</h6>
+                            </div>
+                            <ul class="list-inline" style="z-index:0; transform: translate(0,-50px);">
+                                <li class="list-inline-item"><a href="https://www.facebook.com/vatsal.pandey.2000"><i class="fa fa-facebook fa-2x facebook"></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.instagram.com/_pixie.realm_/"><i class="fa fa-instagram fa-2x instagram"></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.behance.net/vatsalpandey"><i class="fa fa-link fa-2x link"></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.linkedin.com/in/vatsal-pandey-174b8618b"><i class="fa fa-linkedin fa-2x linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="member col-4">
+                        <div class="text-center"> 
+                            <img src="/media/team/K Adityaraj Chowhan.jpg" class="face rounded-circle img-thumbnail" width="200" height="200"  style="transform: translate(0,100px);">
+                            <div class="card py-3" style="z-index:-1; height:240px">
+                                <h5 class="font-weight-bold" style="margin-top:100px">K. Adityaraj Chowhan</h5>
+                                <h6 class="subtitle mb-3" style="color: #8d97ad;">Head Coordinator</h6>
+                            </div>
+                            <ul class="list-inline" style="z-index:0; transform: translate(0,-50px);">
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-facebook fa-2x facebook"></i></a></li>
+                                <li class="list-inline-item"><a href="https://instagram.com/adityaraj_chowhan?utm_medium=copy_link"><i class="fa fa-instagram fa-2x instagram"></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.linkedin.com/in/k-adityaraj-chowhan"><i class="fa fa-linkedin fa-2x linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="member col-4">
+                        <div class="text-center"> 
+                            <img src="/media/team/Atharva Shrivastava.jpeg" class="face rounded-circle img-thumbnail" width="200" height="200"  style="transform: translate(0,100px);">
+                            <div class="card py-3" style="z-index:-1; height:240px">
+                                <h5 class="font-weight-bold" style="margin-top:100px">Atharva Shrivastava</h5>
+                                <h6 class="subtitle mb-3" style="color: #8d97ad;">Head Coordinator</h6>
+                            </div>
+                            <ul class="list-inline" style="z-index:0; transform: translate(0,-50px);">
+                                <li class="list-inline-item"><a href="https://www.facebook.com/atharva.shrivastava.73"><i href="" class="fa fa-facebook fa-2x facebook"></i></a></li>
+                                <li class="list-inline-item"><a href="https://instagram.com/shri_atharva"><i class="fa fa-instagram fa-2x instagram"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin fa-2x linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="member col-4">
+                        <div class="text-center"> 
+                            <img src="/media/team/Anitesh Kumar.jpg" class="face rounded-circle img-thumbnail" width="200" height="200"  style="transform: translate(0,100px);">
+                            <div class="card py-3" style="z-index:-1; height:240px">
+                                <h5 class="font-weight-bold" style="margin-top:100px">Anitesh Kumar</h5>
+                                <h6 class="subtitle mb-3" style="color: #8d97ad;">Head Coordinator</h6>
+                            </div>
+                            <ul class="list-inline" style="z-index:0; transform: translate(0,-50px);">
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-facebook fa-2x facebook"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-instagram fa-2x instagram"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin fa-2x linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="member col-4">
+                        <div class="text-center"> 
+                            <img src="/media/team/Yashasvi Nayak.jpg" class="face rounded-circle img-thumbnail" width="200" height="200"  style="transform: translate(0,100px);">
+                            <div class="card py-3" style="z-index:-1; height:240px">
+                                <h5 class="font-weight-bold" style="margin-top:100px">Yashasvi Nayak</h5>
+                                <h6 class="subtitle mb-3" style="color: #8d97ad;">Head Coordinator</h6>
+                            </div>
+                            <ul class="list-inline" style="z-index:0; transform: translate(0,-50px);">
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-facebook fa-2x facebook"></i></a></li>
+                                <li class="list-inline-item"><a href="https://instagram.com/mr._yashasvi"><i class="fa fa-instagram fa-2x instagram"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin fa-2x linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>   
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="team">
+        <div class="container-fluid">
+            <div class="container-fluid d-flex justify-content-center">
+                <div class="row">
+                    <div class="member col-4">
+                        <div class="text-center"> 
+                            <img src="/media/team/Mandeep Singh.jpg" class="face rounded-circle img-thumbnail" width="200" height="200"  style="transform: translate(0,100px);">
+                            <div class="card py-3" style="z-index:-1; height:240px">
+                                <h5 class="font-weight-bold" style="margin-top:100px">Mandeep Singh</h5>
+                                <h6 class="subtitle mb-3" style="color: #8d97ad;">Core Coordinator</h6>
+                            </div>
+                            <ul class="list-inline" style="z-index:0; transform: translate(0,-50px);">
+                                <li class="list-inline-item"><a href="#"><i href="" class="fa fa-facebook fa-2x facebook"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-instagram fa-2x instagram"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin fa-2x linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="member col-4">
+                        <div class="text-center"> 
+                            <img src="/media/team/Nirdesh Sharma.jpg" class="face rounded-circle img-thumbnail" width="200" height="200"  style="transform: translate(0,100px);">
+                            <div class="card py-3" style="z-index:-1; height:240px">
+                                <h5 class="font-weight-bold" style="margin-top:100px">Nirdesh Sharma</h5>
+                                <h6 class="subtitle mb-3" style="color: #8d97ad;">Core Coordinator</h6>
+                            </div>
+                            <ul class="list-inline" style="z-index:0; transform: translate(0,-50px);">
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-facebook fa-2x facebook"></i></a></li>
+                                <li class="list-inline-item"><a href="https://instagram.com/nsharmaz_photography"><i class="fa fa-instagram fa-2x instagram"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin fa-2x linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="member col-4">
+                        <div class="text-center"> 
+                            <img src="/media/team/Arushi Chaturvedi.JPG" class="face rounded-circle img-thumbnail" width="200" height="200"  style="transform: translate(0,100px);">
+                            <div class="card py-3" style="z-index:-1; height:240px">
+                                <h5 class="font-weight-bold" style="margin-top:100px">Arushi Chaturvedi</h5>
+                                <h6 class="subtitle mb-3" style="color: #8d97ad;">Core Coordinator</h6>
+                            </div>
+                            <ul class="list-inline" style="z-index:0; transform: translate(0,-50px);">
+                                <li class="list-inline-item"><a href="https://m.facebook.com/Arushi-chaturvedi-100306508217944/?__tn__=C-R"><i class="fa fa-facebook fa-2x facebook"></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.instagram.com/arushihihihi/"><i class="fa fa-instagram fa-2x instagram"></i></a></li>
+                                <li class="list-inline-item"><a href="https://in.linkedin.com/in/arushi-chaturvedi-4b461b196"><i class="fa fa-linkedin fa-2x linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="member col-4">
+                        <div class="text-center"> 
+                            <img src="/media/team/Dubi Sao.jpg" class="face rounded-circle img-thumbnail" width="200" height="200"  style="transform: translate(0,100px);">
+                            <div class="card py-3" style="z-index:-1; height:240px">
+                                <h5 class="font-weight-bold" style="margin-top:100px">Dubi Sao</h5>
+                                <h6 class="subtitle mb-3" style="color: #8d97ad;">Core Coordinator</h6>
+                            </div>
+                            <ul class="list-inline" style="z-index:0; transform: translate(0,-50px);">
+                                <li class="list-inline-item"><a href="https://www.facebook.com/dubi.sao"><i href="" class="fa fa-facebook fa-2x facebook"></i></a></li>
+                                <li class="list-inline-item"><a href="http://www.instagram.com/dubisa0"><i class="fa fa-instagram fa-2x instagram"></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.linkedin.com/in/dubi-sao-249825190"><i class="fa fa-linkedin fa-2x linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="member col-4">
+                        <div class="text-center"> 
+                            <img src="/media/team/Rishabh Chandrakar.jpg" class="face rounded-circle img-thumbnail" width="200" height="200"  style="transform: translate(0,100px);">
+                            <div class="card py-3" style="z-index:-1; height:240px">
+                                <h5 class="font-weight-bold" style="margin-top:100px">Rishabh Chandrakar</h5>
+                                <h6 class="subtitle mb-3" style="color: #8d97ad;">Core Coordinator</h6>
+                            </div>
+                            <ul class="list-inline" style="z-index:0; transform: translate(0,-50px);">
+                                <li class="list-inline-item"><a href="https://m.facebook.com/krish29f"><i class="fa fa-facebook fa-2x facebook"></i></a></li>
+                                <li class="list-inline-item"><a href="http://www.instagram.com/reelkrish"><i class="fa fa-instagram fa-2x instagram"></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.linkedin.com/in/rishabhchandrakar"><i class="fa fa-linkedin fa-2x linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="member col-4">
+                        <div class="text-center"> 
+                            <img src="/media/team/Aman Priyansh John.jpeg" class="face rounded-circle img-thumbnail" width="200" height="200"  style="transform: translate(0,100px);">
+                            <div class="card py-3" style="z-index:-1; height:240px">
+                                <h5 class="font-weight-bold" style="margin-top:100px">Aman Priyansh John</h5>
+                                <h6 class="subtitle mb-3" style="color: #8d97ad;">Core Coordinator</h6>
+                            </div>
+                            <ul class="list-inline" style="z-index:0; transform: translate(0,-50px);">
+                                <li class="list-inline-item"><a href="https://www.facebook.com/aman.priyansh/"><i class="fa fa-facebook fa-2x facebook"></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.instagram.com/arnodroaian/"><i class="fa fa-instagram fa-2x instagram"></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.linkedin.com/in/aman-priyansh-john-276508190/"><i class="fa fa-linkedin fa-2x linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="member col-4">
+                        <div class="text-center"> 
+                            <img src="/media/team/yash kharat.jpg" class="face rounded-circle img-thumbnail" width="200" height="200"  style="transform: translate(0,100px);">
+                            <div class="card py-3" style="z-index:-1; height:240px">
+                                <h5 class="font-weight-bold" style="margin-top:100px">Yash Kharat</h5>
+                                <h6 class="subtitle mb-3" style="color: #8d97ad;">Core Coordinator</h6>
+                            </div>
+                            <ul class="list-inline" style="z-index:0; transform: translate(0,-50px);">
+                                <li class="list-inline-item"><a href="#"><i href="" class="fa fa-facebook fa-2x facebook"></i></a></li>
+                                <li class="list-inline-item"><a href="https://instagram.com/_yashkharat?utm_medium=copy_link"><i class="fa fa-instagram fa-2x instagram"></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.vogue.it/en/photovogue/Portfolio/Archive?photographer=yash%20kharat&count=18&refresh_ce="><i class="fa fa-link fa-2x link"></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.linkedin.com/in/yash-kharat-52028018b"><i class="fa fa-linkedin fa-2x linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="member col-4">
+                        <div class="text-center"> 
+                            <img src="/media/team/Adrika Sahu.jpg" class="face rounded-circle img-thumbnail" width="200" height="200"  style="transform: translate(0,100px);">
+                            <div class="card py-3" style="z-index:-1; height:240px">
+                                <h5 class="font-weight-bold" style="margin-top:100px">Adrika Sahu</h5>
+                                <h6 class="subtitle mb-3" style="color: #8d97ad;">Core Coordinator</h6>
+                            </div>
+                            <ul class="list-inline" style="z-index:0; transform: translate(0,-50px);">
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-facebook fa-2x facebook"></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.instagram.com/adrikasahu_/"><i class="fa fa-instagram fa-2x instagram"></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.linkedin.com/mwlite/in/adrika-sahu-764b721a6"><i class="fa fa-linkedin fa-2x linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="member col-4">
+                        <div class="text-center"> 
+                            <img src="/media/team/Ishita Kosaria.jpg" class="face rounded-circle img-thumbnail" width="200" height="200"  style="transform: translate(0,100px);">
+                            <div class="card py-3" style="z-index:-1; height:240px">
+                                <h5 class="font-weight-bold" style="margin-top:100px">Ishita Kosaria</h5>
+                                <h6 class="subtitle mb-3" style="color: #8d97ad;">Core Coordinator</h6>
+                            </div>
+                            <ul class="list-inline" style="z-index:0; transform: translate(0,-50px);">
+                                <li class="list-inline-item"><a href="https://www.facebook.com/ishita.kosaria/"><i class="fa fa-facebook fa-2x facebook"></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.instagram.com/ishita_k13/"><i class="fa fa-instagram fa-2x instagram"></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.linkedin.com/in/ishita-kosaria-87930421b/"><i class="fa fa-linkedin fa-2x linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="member col-4">
+                        <div class="text-center"> 
+                            <img src="/media/team/Dev Kumar Tirkey.jpg" class="face rounded-circle img-thumbnail" width="200" height="200"  style="transform: translate(0,100px);">
+                            <div class="card py-3" style="z-index:-1; height:240px">
+                                <h5 class="font-weight-bold" style="margin-top:100px">Dev Kumar Tirkey</h5>
+                                <h6 class="subtitle mb-3" style="color: #8d97ad;">Core Coordinator</h6>
+                            </div>
+                            <ul class="list-inline" style="z-index:0; transform: translate(0,-50px);">
+                                <li class="list-inline-item"><a href="#"><i href="" class="fa fa-facebook fa-2x facebook"></i></a></li>
+                                <li class="list-inline-item"><a href="http://www.instagram.com/exposured_dark"><i class="fa fa-instagram fa-2x instagram"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin fa-2x linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="member col-4">
+                        <div class="text-center"> 
+                            <img src="/media/team/Tushar Sahu.jpeg" class="face rounded-circle img-thumbnail" width="200" height="200"  style="transform: translate(0,100px);">
+                            <div class="card py-3" style="z-index:-1; height:240px">
+                                <h5 class="font-weight-bold" style="margin-top:100px">Tushar Sahu</h5>
+                                <h6 class="subtitle mb-3" style="color: #8d97ad;">Core Coordinator</h6>
+                            </div>
+                            <ul class="list-inline" style="z-index:0; transform: translate(0,-50px);">
+                                <li class="list-inline-item"><a href="https://m.facebook.com/100009562451568/"><i class="fa fa-facebook fa-2x facebook"></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.instagram.com/tusharsahu2115/"><i class="fa fa-instagram fa-2x instagram"></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.vogue.com/photovogue/photographers/218031"><i class="fa fa-link fa-2x link"></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.linkedin.com/mwlite/in/tushar-sahu-22352a190"><i class="fa fa-linkedin fa-2x linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>   
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="team">
+        <div class="container-fluid">
+            <div class="container-fluid d-flex justify-content-center">
+                <div class="row">
+                    <div class="member col-4">
+                        <div class="text-center"> 
+                            <img src="/media/team/Bhavesh Chandani.jpg" class="face rounded-circle img-thumbnail" width="200" height="200"  style="transform: translate(0,100px);">
+                            <div class="card py-3" style="z-index:-1; height:240px">
+                                <h5 class="font-weight-bold" style="margin-top:100px">Bhavesh Chandani</h5>
+                                <h6 class="subtitle mb-3" style="color: #8d97ad;">Executive</h6>
+                            </div>
+                            <ul class="list-inline" style="z-index:0; transform: translate(0,-50px);">
+                                <li class="list-inline-item"><a href="https://www.facebook.com/bhavesh.chandani.12"><i href="" class="fa fa-facebook fa-2x facebook"></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.instagram.com/bhavesh_5_"><i class="fa fa-instagram fa-2x instagram"></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.linkedin.com/in/bhavesh-chandani-007a401b7"><i class="fa fa-linkedin fa-2x linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="member col-4">
+                        <div class="text-center"> 
+                            <img src="/media/team/Chirayu Patni.jpeg" class="face rounded-circle img-thumbnail" width="200" height="200"  style="transform: translate(0,100px);">
+                            <div class="card py-3" style="z-index:-1; height:240px">
+                                <h5 class="font-weight-bold" style="margin-top:100px">Chirayu Patni</h5>
+                                <h6 class="subtitle mb-3" style="color: #8d97ad;">Executive</h6>
+                            </div>
+                            <ul class="list-inline" style="z-index:0; transform: translate(0,-50px);">
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-facebook fa-2x facebook"></i></a></li>
+                                <li class="list-inline-item"><a href="https://instagram.com/patni_chirayu?utm_medium=copy_link"><i class="fa fa-instagram fa-2x instagram"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin fa-2x linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="member col-4">
+                        <div class="text-center"> 
+                            <img src="/media/team/Hrishabh Singh.jpeg" class="face rounded-circle img-thumbnail" width="200" height="200"  style="transform: translate(0,100px);">
+                            <div class="card py-3" style="z-index:-1; height:240px">
+                                <h5 class="font-weight-bold" style="margin-top:100px">Hrishabh Singh</h5>
+                                <h6 class="subtitle mb-3" style="color: #8d97ad;">Executive</h6>
+                            </div>
+                            <ul class="list-inline" style="z-index:0; transform: translate(0,-50px);">
+                                <li class="list-inline-item"><a href="https://www.facebook.com/hrishabh.singh.77582/"><i class="fa fa-facebook fa-2x facebook"></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.instagram.com/hrishabh169/"><i class="fa fa-instagram fa-2x instagram"></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.linkedin.com/in/hrishabh-singh-997259218/"><i class="fa fa-linkedin fa-2x linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="member col-4">
+                        <div class="text-center"> 
+                            <img src="/media/team/Nishant Bharadwaj.jpg" class="face rounded-circle img-thumbnail" width="200" height="200"  style="transform: translate(0,100px);">
+                            <div class="card py-3" style="z-index:-1; height:240px">
+                                <h5 class="font-weight-bold" style="margin-top:100px">Nishant Bharadwaj</h5>
+                                <h6 class="subtitle mb-3" style="color: #8d97ad;">Executive</h6>
+                            </div>
+                            <ul class="list-inline" style="z-index:0; transform: translate(0,-50px);">
+                                <li class="list-inline-item"><a href="#"><i href="" class="fa fa-facebook fa-2x facebook"></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.instagram.com/nxhnt/"><i class="fa fa-instagram fa-2x instagram"></i></a></li>
+                                <li class="list-inline-item"><a href="https://sites.google.com/view/nishantbharadwaj/home"><i class="fa fa-link fa-2x link"></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.linkedin.com/in/nishant-bharadwaj-0b8b56220/"><i class="fa fa-linkedin fa-2x linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="member col-4">
+                        <div class="text-center"> 
+                            <img src="/media/team/Prathamesh Munje.jpg" class="face rounded-circle img-thumbnail" width="200" height="200"  style="transform: translate(0,100px);">
+                            <div class="card py-3" style="z-index:-1; height:240px">
+                                <h5 class="font-weight-bold" style="margin-top:100px">Prathamesh Munje</h5>
+                                <h6 class="subtitle mb-3" style="color: #8d97ad;">Executive</h6>
+                            </div>
+                            <ul class="list-inline" style="z-index:0; transform: translate(0,-50px);">
+                                <li class="list-inline-item"><a href="https://www.facebook.com/profile.php?id=100007773556697"><i class="fa fa-facebook fa-2x facebook"></i></a></li>
+                                <li class="list-inline-item"><a href="https://instagram.com/harmonyclicks_?utm_medium=copy_link"><i class="fa fa-instagram fa-2x instagram"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin fa-2x linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="member col-4">
+                        <div class="text-center"> 
+                            <img src="/media/team/Utkarsh Chaurasia.jpg" class="face rounded-circle img-thumbnail" width="200" height="200"  style="transform: translate(0,100px);">
+                            <div class="card py-3" style="z-index:-1; height:240px">
+                                <h5 class="font-weight-bold" style="margin-top:100px">Utkarsh Chaurasia</h5>
+                                <h6 class="subtitle mb-3" style="color: #8d97ad;">Executive</h6>
+                            </div>
+                            <ul class="list-inline" style="z-index:0; transform: translate(0,-50px);">
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-facebook fa-2x facebook"></i></a></li>
+                                <li class="list-inline-item"><a href="https://instagram.com/they_call_me.photographer?utm_medium=copy_link"><i class="fa fa-instagram fa-2x instagram"></i></a></li>
+                                <li class="list-inline-item"><a href="https://photos.app.goo.gl/tm1kpDXBUYxzPvR76"><i class="fa fa-link fa-2x link"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin fa-2x linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="member col-4">
+                        <div class="text-center"> 
+                            <img src="/media/team/Abu Anas.jpg" class="face rounded-circle img-thumbnail" width="200" height="200"  style="transform: translate(0,100px);">
+                            <div class="card py-3" style="z-index:-1; height:240px">
+                                <h5 class="font-weight-bold" style="margin-top:100px">Abu Anas</h5>
+                                <h6 class="subtitle mb-3" style="color: #8d97ad;">Executive</h6>
+                            </div>
+                            <ul class="list-inline" style="z-index:0; transform: translate(0,-50px);">
+                                <li class="list-inline-item"><a href="https://www.facebook.com/profile.php?id=100060341564011"><i href="" class="fa fa-facebook fa-2x facebook"></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.instagram.com/anas_a.b.u/"><i class="fa fa-instagram fa-2x instagram"></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.linkedin.com/in/abu-anas-55388a208"><i class="fa fa-linkedin fa-2x linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="member col-4">
+                        <div class="text-center"> 
+                            <img src="/media/team/Yash Raja.jpeg" class="face rounded-circle img-thumbnail" width="200" height="200"  style="transform: translate(0,100px);">
+                            <div class="card py-3" style="z-index:-1; height:240px">
+                                <h5 class="font-weight-bold" style="margin-top:100px">Yash Raja</h5>
+                                <h6 class="subtitle mb-3" style="color: #8d97ad;">Executive</h6>
+                            </div>
+                            <ul class="list-inline" style="z-index:0; transform: translate(0,-50px);">
+                                <li class="list-inline-item"><a href="https://www.facebook.com/yraja09"><i class="fa fa-facebook fa-2x facebook"></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.instagram.com/y.raja09/?utm_medium=copy_link"><i class="fa fa-instagram fa-2x instagram"></i></a></li>
+                                <li class="list-inline-item"><a href="https://linktr.ee/y.raja09"><i class="fa fa-link fa-2x link"></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.linkedin.com/in/yash-raja-a441011b7"><i class="fa fa-linkedin fa-2x linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="member col-4">
+                        <div class="text-center"> 
+                            <img src="/media/team/Praveen Kumar Sahu.jpg" class="face rounded-circle img-thumbnail" width="200" height="200"  style="transform: translate(0,100px);">
+                            <div class="card py-3" style="z-index:-1; height:240px">
+                                <h5 class="font-weight-bold" style="margin-top:100px">Praveen Kumar Sahu</h5>
+                                <h6 class="subtitle mb-3" style="color: #8d97ad;">Executive</h6>
+                            </div>
+                            <ul class="list-inline" style="z-index:0; transform: translate(0,-50px);">
+                                <li class="list-inline-item"><a href="https://www.facebook.com/praveen.sahu.56884761"><i class="fa fa-facebook fa-2x facebook"></i></a></li>
+                                <li class="list-inline-item"><a href="https://www.instagram.com/_praveen_sahu/"><i class="fa fa-instagram fa-2x instagram"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin fa-2x linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>   
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock body %}

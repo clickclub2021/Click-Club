@@ -1,0 +1,216 @@
+{% extends 'base.html' %}
+
+{% block title %}Pixel Lane 2022{% endblock title %}
+{% block eventsactive %}active{% endblock eventsactive %}
+{% block body %}
+<style>
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+  
+  {% comment %} /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+  } {% endcomment %}
+
+</style>
+<script>
+
+</script>
+
+<div class="container">
+<div class="row">
+  <div class="column">
+    <img src="/media/static/6.jpg" data-bs-toggle="modal" data-bs-target="#Modal1" style="cursor: pointer;">
+    <div class="modal fade" id="Modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style=" height:100vh; width:100vw; background-color: rgba(0,0,0,0.9);">
+      <div class="modal-dialog modal-xl modal-dialog-centered modal-fullscreen-sm-down">
+        <div class="modal-content" style="background-color: transparent;">
+          <div class="container float-right">
+            <button type="button" class="btn-close btn-close-white float-right" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="d-flex justify-content-center align-items-center">
+            <img src="/media/static/6.jpg" style="objectFit: contain">
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="/media/static/2.jpg">
+    <img src="/media/static/3.jpg">
+    <img src="/media/static/4.jpg">
+    <img src="/media/static/5.jpg">
+    <img src="/media/static/6.jpg">
+    <img src="/media/static/7.jpg">
+    <img src="/media/static/8.jpg">
+  </div>
+  <div class="column">
+    <img src="/media/static/3.jpg">
+    <img src="/media/static/4.jpg">
+    <img src="/media/static/1.jpg">
+    <img src="/media/static/2.jpg">
+    <img src="/media/static/7.jpg">
+    <img src="/media/static/8.jpg">
+    <img src="/media/static/5.jpg">
+    <img src="/media/static/6.jpg">
+  </div>
+  <div class="column">
+    <img src="/media/static/6.jpg">
+    <img src="/media/static/1.jpg">
+    <img src="/media/static/3.jpg">
+    <img src="/media/static/2.jpg">
+    <img src="/media/static/5.jpg">
+    <img src="/media/static/7.jpg">
+    <img src="/media/static/8.jpg">
+    <img src="/media/static/4.jpg">
+  </div>
+  <div class="column">
+    <img src="/media/static/5.jpg">
+    <img src="/media/static/4.jpg">
+    <img src="/media/static/1.jpg">
+    <img src="/media/static/6.jpg">
+    <img src="/media/static/2.jpg">
+    <img src="/media/static/7.jpg">
+    <img src="/media/static/8.jpg">
+    <img src="/media/static/3.jpg">
+  </div>
+</div>
+</div>
+
+<section id="portfolio" class="portfolio">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-title">
+      <h2>Portfolio</h2>
+      <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+    </div>
+
+    <ul id="portfolio-flters" class="d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+      <li data-filter="*" class="filter-active">All</li>
+      <li data-filter=".filter-app">App</li>
+      <li data-filter=".filter-card">Card</li>
+      <li data-filter=".filter-web">Web</li>
+    </ul>
+
+    <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+        <div class="portfolio-img"><img src="/media/1.jpeg" class="img-fluid" alt=""></div>
+        <div class="portfolio-info">
+          <h4>App 1</h4>
+          <p>App</p>
+          <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
+          <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+        <div class="portfolio-img"><img src="/media/2.jpeg" class="img-fluid" alt=""></div>
+        <div class="portfolio-info">
+          <h4>Web 3</h4>
+          <p>Web</p>
+          <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+          <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+        <div class="portfolio-img"><img src="/media/3.jpeg" class="img-fluid" alt=""></div>
+        <div class="portfolio-info">
+          <h4>App 2</h4>
+          <p>App</p>
+          <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
+          <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+        <div class="portfolio-img"><img src="/media/4.jpeg" class="img-fluid" alt=""></div>
+        <div class="portfolio-info">
+          <h4>Card 2</h4>
+          <p>Card</p>
+          <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
+          <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+        <div class="portfolio-img"><img src="/media/5.jpeg" class="img-fluid" alt=""></div>
+        <div class="portfolio-info">
+          <h4>Web 2</h4>
+          <p>Web</p>
+          <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
+          <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+        <div class="portfolio-img"><img src="/media/6.jpeg" class="img-fluid" alt=""></div>
+        <div class="portfolio-info">
+          <h4>App 3</h4>
+          <p>App</p>
+          <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
+          <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+        <div class="portfolio-img"><img src="/media/7.jpeg" class="img-fluid" alt=""></div>
+        <div class="portfolio-info">
+          <h4>Card 1</h4>
+          <p>Card</p>
+          <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
+          <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+        <div class="portfolio-img"><img src="/media/8.jpeg" class="img-fluid" alt=""></div>
+        <div class="portfolio-info">
+          <h4>Card 3</h4>
+          <p>Card</p>
+          <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
+          <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+        <div class="portfolio-img"><img src="/media/9.jpeg" class="img-fluid" alt=""></div>
+        <div class="portfolio-info">
+          <h4>Web 3</h4>
+          <p>Web</p>
+          <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+          <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+{% endblock body %}

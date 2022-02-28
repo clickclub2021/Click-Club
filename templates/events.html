@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}Events{% endblock title %}
+{% block eventsactive %}active{% endblock eventsactive %}
+{% block body %}
+
+<div class="container-fluid my-3">
+    <div class="container">
+        <div class="card">
+        <div class="row p-3">
+            <div class="col-3" style="overflow:hidden;">
+                <img src="/static/3.jpg" style="width: calc(100% + 1vw + 1vh); height: calc(100% + 1vw + 1vh); object-fit:cover;" class="rounded float-left" alt="..." />
+            </div>
+            <div class="col-8 px-5">
+                <h2 class="card-title py-3" style="font-size: min(22px,calc(40% + 1vw + 1vh));">Pixel Lane 2022</h2>
+                <p style="font-size: min(16px,calc(25% + 1vw + 1vh));">Some info related to Pixel Lane 2022 <a href="events/pixellane2022">read more</a></p>
+            </div>
+            <a href="events/pixellane2022" class="stretched-link"></a>
+        </div>
+        </div>
+    </div>
+</div>
+
+{% endblock body %}

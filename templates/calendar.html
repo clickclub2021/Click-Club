@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    
+  <title>Calendar | Click Club</title>
+  <style>
+    .nav-link {
+      transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+      color: #fff;
+      border-bottom: 4px solid transparent;
+    }
+    .navbar-nav .nav-item:hover .nav-link {
+      color: #fff;
+      border-bottom: 4px solid #FF6633;
+    }
+    .navbar-nav .active {
+      border-bottom: 4px solid #FF6633;
+    }
+    @media screen and (max-width: 1000px) {
+      .nebula {
+         width: 100%;
+         overflow: hidden;
+         margin: 0 -150px 0 -150px;
+      }
+   }
+  </style>
+</head>
+
+<body style="background-color:#f7f7f7">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <div class="col"></div>
+        <a class="navbar-brand" href="/" id="logo">
+          <img src="/static/Click White Logo.png" style="height:100px; width:100px;" alt="..." />
+          Click Club
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="col-4"></div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="navbar-nav ml-auto mb-2 mx-5 mb-lg-0">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link {% block homeactive %}{% endblock homeactive %}" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {% block eventsactive %}{% endblock eventsactive %}" href="/events">Events</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="/calendar">Calendar</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {% block teamactive %}{% endblock teamactive %}" href="/team">Team</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {% block contactactive %}{% endblock contactactive %}" href="/contact">Contact</a>
+              </li>
+              {% if user.is_authenticated %}
+              <li class="nav-item">
+                <a class="nav-link {% block postactive %}{% endblock postactive %}" href="/post">Post</a>
+              </li>
+              {% endif %}
+              <li class="nav-item">
+                <a class="btn btn-link btn-floating btn-lg text-light" href="https://www.facebook.com/clickclubnitrr/" role="button"
+                  data-mdb-ripple-color="dark"><i class="fa fa-facebook-f"></i></a>
+                <a class="btn btn-link btn-floating btn-lg text-light" href="https://www.instagram.com/clickclubnitrr/" role="button"
+                  data-mdb-ripple-color="dark"><i class="fa fa-instagram"></i></a>
+              </li>
+            </ul>
+            {% comment %} <form class="d-flex">
+              {% if user.is_authenticated %}
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="/services" id="navbarDropdown" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  Welcome {{request.user}}
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="/logout">Logout</a></li>
+                </ul>
+              </li>
+              {% else %}
+              <a class="btn btn-primary me-2" href="/login" role="button">Login</a>
+              <a class="btn btn-primary me-2" href="/signup" role="button">Signup</a>
+              {% endif %}
+            </form> {% endcomment %}
+          </div>
+        </div>
+      </div>
+    </nav>
+  
+<style>
+    .carousel-inner .carousel-item-right.active,
+.carousel-inner .carousel-item-next {
+  transform: translateX(100%);
+}
+
+.carousel-inner .carousel-item-left.active, 
+.carousel-inner .carousel-item-prev {
+  transform: translateX(-100%);
+}
+
+.carousel-inner .carousel-item-right,
+.carousel-inner .carousel-item-left{ 
+  transform: translateX(0);
+}
+.list-inline-item{
+    opacity:0.5;
+}
+.list-inline-item:active{
+    opacity:1;
+}
+.month{
+    font-size: min(100%,2vw)
+}
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div id="custCarousel" class="carousel slide" data-ride="carousel" align="center">
+                <!-- slides -->
+                <div class="carousel-inner">
+                    <style>
+                        img{
+                            max-height: 60vh;
+                        }
+                    </style>
+                    <div class="carousel-item active"> <img src="/media/Calendar/1.jpg" alt="Hills"> </div>
+                    <div class="carousel-item"> <img src="/media/Calendar/2.jpg" alt="Hills"> </div>
+                    <div class="carousel-item"> <img src="/media/Calendar/3.jpg" alt="Hills"> </div>
+                    <div class="carousel-item"> <img src="/media/Calendar/4.jpg" alt="Hills"> </div>
+                    <div class="carousel-item"> <img src="/media/Calendar/5.jpg" alt="Hills"> </div>
+                    <div class="carousel-item"> <img src="/media/Calendar/6.jpg" alt="Hills"> </div>
+                    <div class="carousel-item"> <img src="/media/Calendar/7.jpg" alt="Hills"> </div>
+                    <div class="carousel-item"> <img src="/media/Calendar/8.jpg" alt="Hills"> </div>
+                    <div class="carousel-item"> <img src="/media/Calendar/9.jpg" alt="Hills"> </div>
+                    <div class="carousel-item"> <img src="/media/Calendar/10.jpg" alt="Hills"> </div>
+                    <div class="carousel-item"> <img src="/media/Calendar/11.jpg" alt="Hills"> </div>
+                    <div class="carousel-item"> <img src="/media/Calendar/12.jpg" alt="Hills"> </div>
+                </div> 
+                <!-- Left right --> 
+                <a class="carousel-control-prev" href="#custCarousel" data-slide="prev"> <span class="carousel-control-prev-icon"></span> </a> 
+                <a class="carousel-control-next" href="#custCarousel" data-slide="next"> <span class="carousel-control-next-icon"></span> </a> 
+                <!-- Thumbnails -->
+                <ol class="carousel-indicators p-2" style="position: relative;">
+                    <li class="list-inline-item active"> <a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#custCarousel"> <img src="/media/Calendar/1.jpg" class="img-fluid">  </a> <p class="month">Jan</p> </li>
+                    <li class="list-inline-item"> <a id="carousel-selector-1" data-slide-to="1" data-target="#custCarousel"> <img src="/media/Calendar/2.jpg" class="img-fluid"> </a> <p class="month">Feb</p> </li>
+                    <li class="list-inline-item"> <a id="carousel-selector-2" data-slide-to="2" data-target="#custCarousel"> <img src="/media/Calendar/3.jpg" class="img-fluid"> </a> <p class="month">Mar</p> </li>
+                    <li class="list-inline-item"> <a id="carousel-selector-2" data-slide-to="3" data-target="#custCarousel"> <img src="/media/Calendar/4.jpg" class="img-fluid"> </a> <p class="month">Apr</p> </li>
+                    <li class="list-inline-item"> <a id="carousel-selector-0" data-slide-to="4" data-target="#custCarousel"> <img src="/media/Calendar/5.jpg" class="img-fluid"> </a> <p class="month">May</p> </li>
+                    <li class="list-inline-item"> <a id="carousel-selector-1" data-slide-to="5" data-target="#custCarousel"> <img src="/media/Calendar/6.jpg" class="img-fluid"> </a> <p class="month">Jun</p></li>
+                    <li class="list-inline-item"> <a id="carousel-selector-2" data-slide-to="6" data-target="#custCarousel"> <img src="/media/Calendar/7.jpg" class="img-fluid"> </a> <p class="month">Jul</p> </li>
+                    <li class="list-inline-item"> <a id="carousel-selector-2" data-slide-to="7" data-target="#custCarousel"> <img src="/media/Calendar/8.jpg" class="img-fluid"> </a> <p class="month">Aug</p> </li>
+                    <li class="list-inline-item"> <a id="carousel-selector-0" data-slide-to="8" data-target="#custCarousel"> <img src="/media/Calendar/9.jpg" class="img-fluid"> </a> <p class="month">Sep</p> </li>
+                    <li class="list-inline-item"> <a id="carousel-selector-1" data-slide-to="9" data-target="#custCarousel"> <img src="/media/Calendar/10.jpg" class="img-fluid"> </a> <p class="month">Oct</p> </li>
+                    <li class="list-inline-item"> <a id="carousel-selector-2" data-slide-to="10" data-target="#custCarousel"> <img src="/media/Calendar/11.jpg" class="img-fluid"> </a> <p class="month">Nov</p> </li>
+                    <li class="list-inline-item"> <a id="carousel-selector-2" data-slide-to="11" data-target="#custCarousel"> <img src="/media/Calendar/12.jpg" class="img-fluid"> </a> <p class="month">Dec</p> </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="text-center text-white" style="background-color: #f1f1f1;">
+    <!-- Grid container -->
+    <div class="container pt-4">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://www.facebook.com/clickclubnitrr/" role="button"
+          data-mdb-ripple-color="dark"><i class="fa fa-facebook-f"></i></a>
+  
+        <!-- Instagram -->
+        <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://www.instagram.com/clickclubnitrr/" role="button"
+          data-mdb-ripple-color="dark"><i class="fa fa-instagram"></i></a>
+  
+        <!-- Google -->
+        <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="mailto:clickclub@nitrr.ac.in" role="button"
+          data-mdb-ripple-color="dark"><i class="fa fa-google"></i></a>
+  
+        
+      </section>
+      <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+  
+    <!-- Copyright -->
+    <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2022 Copyright: Click Club NIT Raipur
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+  
+  </html>
